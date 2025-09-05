@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    # Caminhos (AJUSTE seu usuário)
+    - export REPO=/home/tmeuwebhost/repositories/bright-checkout-flow
+    - export DEPLOY_PATH=/home/tmeuwebhost/public_html
+
+    # Limpa o destino
+    - /bin/rm -rf $DEPLOY_PATH/*
+
+    # Copia arquivos buildados
+    - /bin/cp -R $REPO/dist/* $DEPLOY_PATH/
+
+    # SPA fallback
+    - if [ ! -f "$DEPLOY_PATH/.htaccess" ]; then printf "%s\n" "RewriteEngine On" "RewriteBase /" "RewriteRule ^index\\.html$ - [L]" "RewriteCond %{REQUEST_FILENAME} !-f" "RewriteCond %{REQUEST_FILENAME} !-d" "RewriteRule . /index.html [L]" > "$DEPLOY_PATH/.htaccess"; fi
