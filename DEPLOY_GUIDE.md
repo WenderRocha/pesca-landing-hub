@@ -12,6 +12,7 @@ Extraia o arquivo zip gerado na ferramenta, copie e cole o conteudo dentro do se
 
 ### 5. Configurar Permissões no GitHub
 
+teste
 1. Vá em **Settings → Actions → General**
 2. **Workflow permissions** → **Read and write permissions** ✅
 3. **Allow GitHub Actions to create and approve pull requests** ✅
