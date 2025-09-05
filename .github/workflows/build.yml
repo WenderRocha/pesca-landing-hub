@@ -24,15 +24,4 @@ jobs:
     
     - name: Build
       run: npm run build
-    
-    - name: Deploy to cPanel
-      uses: appleboy/ssh-action@v0.1.5
-      with:
-        host: ${{ secrets.CPANEL_HOST }}
-        username: ${{ secrets.CPANEL_USERNAME }}
-        key: ${{ secrets.CPANEL_SSH_KEY }}
-        script: |
-          cd /home/${{ secrets.CPANEL_USERNAME }}/repositories/bright-checkout-flow
-          git pull origin main
-          # Execute os comandos do cpanel.yml
-          # (implementar execução dos comandos)
+  
