@@ -2,7 +2,7 @@
 deployment:
   tasks:
     # Caminhos (AJUSTE seu usuário)
-    - export REPO=/home/tmeuwebhost/repositories/bright-checkout-flow
+    - export REPO=/home/tmeuwebhost/repositories/pesca-landing-hub
     - export DEPLOY_PATH=/home/tmeuwebhost/public_html
 
     # Limpa o destino

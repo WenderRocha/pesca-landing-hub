@@ -3,6 +3,11 @@
 
 ## ⚙️ Configuração Passo a Passo
 
+no arquivo cpanel.yml
+
+ALTERAR NOME DE USUARIO
+ALTERAR NOME DO REPOSITORIO
+
 ### 1. Preparar arquivos
 Extraia o arquivo zip gerado na ferramenta, copie e cole o conteudo dentro do seu projeto.
 *Irá substituir o seu arquivo .gitignore.
